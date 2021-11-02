@@ -20,7 +20,7 @@ const App = () => {
 
     return (
 
-        <div className='justify-content-center text-center container minwidth'>
+        <div className='justify-content-center text-center container'>
             <div className='row justify-content-center'>
                 <div className='col-6 navigation'>
                     <h1>Lifetime <img src={lifetime} alt='lifetime' height='60'/></h1>
@@ -28,12 +28,12 @@ const App = () => {
             </div>
 
 
-            <div className='row justify-content-center '>
-                <div className='col-9'>
+            <div className='row justify-content-center'>
+                <div className='col-12 order-2 col-md-9 order-md-1'>
                     <Posts setCurrentId={setCurrentId}/>
                 </div>
 
-                <div className='col-3'>
+                <div className='col-12 order-1 col-md-3 order-md-2'>
                     <Form currentId={currentId} setCurrentId={setCurrentId}/>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import FileBase64 from "react-file-base64";
+import FileBase from "react-file-base64";
 import { useDispatch, useSelector } from "react-redux";
 import {createPost, updatePost} from "../../redux/actions/posts";
 
@@ -54,7 +54,7 @@ const Form = ({ currentId, setCurrentId }) => {
     }
 
     return (
-        <div className='form'>
+        <div className='form mb-4'>
 
             <h1>FORMS!</h1>
                 <div className="input-group mb-3">
@@ -74,7 +74,7 @@ const Form = ({ currentId, setCurrentId }) => {
                 </div>
 
                 <div className="input-group mb-3">
-                    <FileBase64 type='file' multiple={false} value={postData.selectedFile} onDone={({base64}) => setPostData({...postData, selectedFile: base64})}/>
+                    <FileBase type='file' multiple={false} onDone={({base64}) => setPostData({...postData, selectedFile: base64})}/>
                 </div>
 
                 <div className="d-grid gap-2">

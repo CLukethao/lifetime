@@ -28,10 +28,6 @@ body {
     margin-right: 5px;
 }
 
-.minwidth{
-    min-width: 1300px;
-}
-
 
 .tags {
     color: lightgray;
@@ -98,5 +94,9 @@ body {
     margin-bottom: -8px
 }
 
+.card-img-top {
+    width: auto;
+    height: 300px;
+}
 
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import testPhoto from '../../../images/Landscape-Color.jpg'
 import moment from "moment";
 import { useDispatch } from "react-redux";
 import {deletePost, likePost} from "../../../redux/actions/posts";
@@ -9,7 +8,7 @@ const Post = ({ setCurrentId, post }) => {
     return (
         <div className='mb-4'>
             <div className='card shadow backg'>
-                <img className='card-img-top img-fluid blur' src={testPhoto} alt='picture'/>
+                <img className='card-img-top img-fluid blur' src={post.selectedFile} alt={post.title}/>
                 <div className='card-img-overlay row postHeader'>
                     <div className='text-start col-8'>
                         <div className=''>
@@ -73,13 +72,14 @@ const PostFooter = ({ post }) => {
                             Like
                         </button>
                     </div>
-                    <div className='col-6 like-label'>
+
+                    <div className='col like-label'>
                         {post.likeCount}
                     </div>
                 </div>
             </div>
 
-            <div className='col-6 text-end text-danger'>
+            <div className='col-5 offset-1 text-end text-danger'>
                 <button className='btn btn-danger' onClick={() => dispatch(deletePost(post._id))}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          className="bi bi-trash-fill mb-1" viewBox="0 0 16 16">
